@@ -17,4 +17,13 @@ The program displays the search results including:<br>
    • Atomic Name<br>
    • Atomic Weight<br>
    • Block<br>
-   • Metallic Property<br>
+   • Metallic Property<be>
+
+# Added Features
+# QUIZ MODE
+• Randomized Questions: Quiz mode randomly generates questions from the periodic table.<br>
+• Multiple Choice: Questions are presented as multiple-choice options for user interaction.<br>
+• Feedback on Answers: Provides instant feedback on user answers, indicating whether they are correct or incorrect.<br>
+• Score Tracking: Tracks and displays the user's score as they progress through the quiz.<br>
+• Interactive Experience: Users can participate in an interactive learning experience to test their knowledge of the periodic table.<br>
+
