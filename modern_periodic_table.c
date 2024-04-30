@@ -7,7 +7,8 @@
 void startQuiz();
 int generateRandomIndex();
 void askQuestion(int questionNumber, int index, int option);
-void provideFeedback(int index, int answer);
+// void provideFeedback(int index, int answer);
+void provideFeedback(int index, char* answer, int option);
 void displayScore(int score, int totalQuestions);
 int get_option(void);
 int atomic_number(void);
@@ -134,10 +135,12 @@ int get_quiz_option(void) {
     int option;
     printf("\n\n🔢 Select quiz type:\n\n");
     printf("1. Atomic Numbers\n");
+    printf("2. Atomic Names\n");
     printf("Enter Your Choice : ");
     scanf("%d", &option);
     return option;
 }
+
 
 // Function to ask a quiz question
 void askQuestion(int questionNumber, int index, int option) {
@@ -146,29 +149,45 @@ void askQuestion(int questionNumber, int index, int option) {
         case 1:
             printf("What is the atomic number of %s?\n", name[index]);
             break;
+        case 2:
+            printf("What is the atomic name of the element with atomic symbol %s?\n", symbol[index]);
+            break;
     }
 
-    int userAnswer;
+    char userAnswer[20];
     printf("Enter your answer: ");
-    scanf("%d", &userAnswer);
+    scanf("%s", userAnswer);
 
-    provideFeedback(index, userAnswer);
+    provideFeedback(index, userAnswer, option);
 }
 
-// Function to provide feedback for a quiz question
-void provideFeedback(int index, int answer) {
-    int correctAnswer = index + 1;
 
-    if (answer == correctAnswer) {
-        printf("✅ Correct!\n");
-        score++;
-    }
-    else {
-        printf("❌ Incorrect. The correct answer is %d.\n", correctAnswer);
+// Function to provide feedback for a quiz question
+void provideFeedback(int index, char* answer, int option) {
+    int correctAnswerIndex = index;
+
+    if (option == 1) {
+        // Feedback for atomic number quiz
+        int userAnswer = atoi(answer);
+        if (userAnswer == (correctAnswerIndex + 1)) {
+            printf("✅ Correct!\n");
+            score++;
+        } else {
+            printf("❌ Incorrect. The correct answer is %d.\n", correctAnswerIndex + 1);
+        }
+    } else if (option == 2) {
+        // Feedback for atomic name quiz
+        if (strcmp(answer, name[index]) == 0) {
+            printf("✅ Correct!\n");
+            score++;
+        } else {
+            printf("❌ Incorrect. The correct answer is %s.\n", name[index]);
+        }
     }
 
     printf("\n");
 }
+
 
 // Function to display the quiz score
 // Function to display the quiz score in a table-like format
