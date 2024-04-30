@@ -135,12 +135,12 @@ int get_quiz_option(void) {
     int option;
     printf("\n\n🔢 Select quiz type:\n\n");
     printf("1. Atomic Numbers\n");
-    printf("2. Atomic Names\n");
+    printf("2. Atomic Name\n");
+    printf("3. Enter Symbol\n"); // New option
     printf("Enter Your Choice : ");
     scanf("%d", &option);
     return option;
 }
-
 
 // Function to ask a quiz question
 void askQuestion(int questionNumber, int index, int option) {
@@ -150,17 +150,19 @@ void askQuestion(int questionNumber, int index, int option) {
             printf("What is the atomic number of %s?\n", name[index]);
             break;
         case 2:
-            printf("What is the atomic name of the element with atomic symbol %s?\n", symbol[index]);
+            printf("What is the atomic name of the element with atomic number %d?\n", index + 1);
+            break;
+        case 3:
+            printf("Enter the atomic symbol of the element with atomic number %d:\n", index + 1);
             break;
     }
 
-    char userAnswer[20];
+    char userAnswer[5]; // Change size to fit atomic symbol
     printf("Enter your answer: ");
     scanf("%s", userAnswer);
 
     provideFeedback(index, userAnswer, option);
 }
-
 
 // Function to provide feedback for a quiz question
 void provideFeedback(int index, char* answer, int option) {
@@ -183,14 +185,22 @@ void provideFeedback(int index, char* answer, int option) {
         } else {
             printf("❌ Incorrect. The correct answer is %s.\n", name[index]);
         }
+    } else if (option == 3) {
+        // Feedback for entering atomic symbol quiz
+        if (strcmp(answer, symbol[index]) == 0) {
+            printf("✅ Correct!\n");
+            score++;
+        } else {
+            printf("❌ Incorrect. The correct answer is %s.\n", symbol[index]);
+        }
     }
 
     printf("\n");
 }
 
 
+
 // Function to display the quiz score
-// Function to display the quiz score in a table-like format
 void displayScore(int score, int totalQuestions) {
     printf("\n\n");
     printf("┌────────────────────────────────────────────┐\n");
@@ -199,11 +209,9 @@ void displayScore(int score, int totalQuestions) {
     printf("│           Your score: %2d out of %2d         │\n", score, totalQuestions);
     printf("└────────────────────────────────────────────┘\n");
     printf("\nPress any key to return to the main menu...");
-    getchar(); // Wait for user to press any key
-    // getchar(); // Consume newline character
-    system("cls"); // Clear the screen
+    getchar(); 
+    system("cls");
 }
-
 
 // Function to get the main menu option
 int get_option(void) {
