@@ -1,29 +1,82 @@
-# Mordern-Periodic-Table
-This C program is a digital periodic table that allows users to search for elements using criteria such as atomic number, symbol, name, and weight. Additionally, it displays an element's metallic property and the block in which the element is present.
+## Periodic Table Quiz and Information System
 
-# How to Use
-1. Compile: Compile the program using a C compiler.
-2. Run: Execute the compiled program.
-3. Search: Choose one of the search options:<br>
-   • Search by Atomic Number<br>
-   • Search by Atomic Symbol<br>
-   • Search by Atomic Name<br>
-   • Search by Atomic Weight<br>
+---
 
-4. View Results:<br>
-The program displays the search results including:<br>
-   • Atomic Number<br>
-   • Atomic Symbol<br>
-   • Atomic Name<br>
-   • Atomic Weight<br>
-   • Block<br>
-   • Metallic Property<be>
+**Overview:**
 
-# Added Features
-# QUIZ MODE
-• Randomized Questions: Quiz mode randomly generates questions from the periodic table.<br>
-• Multiple Choice: Questions are presented as multiple-choice options for user interaction.<br>
-• Feedback on Answers: Provides instant feedback on user answers, indicating whether they are correct or incorrect.<br>
-• Score Tracking: Tracks and displays the user's score as they progress through the quiz.<br>
-• Interactive Experience: Users can participate in an interactive learning experience to test their knowledge of the periodic table.<br>
+This project is a Periodic Table Quiz and Information System implemented in C. It provides users with the ability to search for elements by various properties, compare elements, and take a quiz to test their knowledge of the periodic table.
 
+---
+
+**Features:**
+
+1. **Search Functionality:**
+   - Users can search for elements by atomic number, atomic symbol, atomic name, or atomic weight.
+   - Detailed information about the searched element is displayed, including its atomic number, symbol, name, weight, block, and metallic property.
+
+2. **Comparison Feature:**
+   - Users can compare two elements based on their atomic properties.
+   - A comparison table is displayed, showing the properties of both elements side by side.
+
+3. **Quiz Feature:**
+   - Users can take a quiz to test their knowledge of the periodic table.
+   - Quiz options include atomic number, atomic name, and atomic symbol.
+   - Feedback is provided for each quiz question, and the user's score is displayed at the end of the quiz.
+
+---
+
+**Usage:**
+
+1. **Compilation:**
+   - Clone the repository to your local machine.
+   - Compile the `main.c` file using a C compiler like GCC.
+     ```bash
+     gcc main.c -o periodic_table_quiz
+     ```
+
+2. **Execution:**
+   - Run the compiled executable.
+     ```bash
+     ./periodic_table_quiz
+     ```
+
+3. **Navigation:**
+   - Follow the on-screen instructions to navigate through the menu options.
+   - Choose from options like searching for elements, comparing elements, or taking a quiz.
+
+4. **Quiz:**
+   - Select the quiz type (atomic number, atomic name, or atomic symbol).
+   - Answer the quiz questions and receive feedback after each question.
+   - View your final score at the end of the quiz.
+
+5. **Comparison:**
+   - Enter the atomic symbols of two elements you wish to compare.
+   - View a comparison table showing the properties of both elements.
+
+---
+
+**Contributing:**
+
+Contributions to this project are welcome! If you have any suggestions, feature requests, or bug reports, feel free to open an issue or submit a pull request on GitHub.
+
+---
+
+**License:**
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and distribute the code as per the terms of the license.
+
+---
+
+**Contact:**
+
+For any inquiries or support, please contact the author at [author_email](mailto:shlokbam19103@gmail.com).
+
+---
+
+**Acknowledgments:**
+
+Special thanks to the developers who contributed to the creation and maintenance of this project.
+
+--- 
+
+**Enjoy exploring the periodic table and testing your knowledge with the Periodic Table Quiz and Information System!**
