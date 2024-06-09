@@ -71,12 +71,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 For any inquiries or support, please contact the author at [author_email](mailto:shlokbam19103@gmail.com).
 
----
-
-**Acknowledgments:**
-
-Special thanks to the developers who contributed to the creation and maintenance of this project.
-
 --- 
 
 **Enjoy exploring the periodic table and testing your knowledge with the Periodic Table Quiz and Information System!**
