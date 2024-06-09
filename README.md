@@ -61,13 +61,6 @@ Contributions to this project are welcome! If you have any suggestions, feature 
 
 ---
 
-**License:**
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and distribute the code as per the terms of the license.
-
----
-
-**Contact:**
 
 For any inquiries or support, please contact the author at [author_email](mailto:shlokbam19103@gmail.com).
 
